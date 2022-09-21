@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 80%);
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    max-width: 1440px;
+    min-height: 922px;
+    background-color: hsl(0, 0%, 98%);
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 355px 1fr;
+    grid-template-rows: 40px 150px 140px 110px 280px;
+    gap: 30px;
+}
+
+#text-container {
+    text-align: center;
+    grid-area: 2 / 1 / 3 / 4;
+    max-width: 550px;
+    justify-self: center;
+}
+
+#light-title {
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+}
+
+#bold-title {
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+
+#text {
+    color: hsl(229, 6%, 66%);
+}
+
+.grid-items {
+    max-width: 355px;
+    min-height: 255px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0px 10px 30px 0px hsl(229, 6%, 66%);
+}
+
+#cyan-border {
+    border-top: 5px solid hsl(180, 62%, 55%);
+    grid-area: 4 / 1 / 5 / 2;
+    justify-self: end;
+}
+
+#red-border {
+    border-top: 5px solid hsl(0, 78%, 62%);
+    grid-area: 3 / 2 / 5 / 3;
+    justify-self: center;
+}
+
+#orange-border {
+    border-top: 5px solid hsl(34, 97%, 64%);
+    grid-area: 5 / 2 / 6 / 3;
+    justify-self: center;
+}
+
+#blue-border {
+    border-top: 5px solid hsl(212, 86%, 64%);
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.title {
+    color: hsl(234, 12%, 34%);
+    font-size: 22px;
+}
+
+.info {
+    color: hsl(229, 6%, 66%);
+    font-size: 14px;
+}
+
+.svgs {
+    float: right;
+    margin-top: 50px;
+}
+
+@media (max-width: 850px) {
+    #container {
+        max-width: 375px;
+        gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 170px repeat(4, 1fr);
+        padding: 16px;
+    }
+
+    #text-container {
+        grid-area: 1 / 1 / 2 / 2;
+        justify-self: center;
+    }
+
+    #light-title,
+    #bold-title {
+        font-size: 24px;
+    }
+
+    #text {
+        font-size: 16px;
+    }
+
+    #cyan-border {
+        grid-area: 2 / 1 / 3 / 2;
+        justify-self: center;
+    }
+    
+    #red-border {
+        grid-area: 3 / 1 / 4 / 2;
+        justify-self: center;
+    }
+    
+    #orange-border {
+        grid-area: 4 / 1 / 5 / 2;
+        justify-self: center;
+    }
+    
+    #blue-border {
+        grid-area: 5 / 1 / 6 / 2;
+        justify-self: center;
+    }
+}
